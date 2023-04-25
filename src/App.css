@@ -58,13 +58,20 @@ header p {
   font-weight: normal;
 }
 
-header svg {
-  fill: var(--clr-black);
+header .logo {
   background-color: white;
   width: 60px;
-  aspect-ratio: 1;
+  height: 60px;
   border-radius: 50%;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+header svg {
+  fill: var(--clr-black);
+  background-color: transparent;
+  width: 70%;
+  aspect-ratio: 1;
 }
 
 /* -- ACCOUNTS -- */
