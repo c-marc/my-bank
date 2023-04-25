@@ -1,5 +1,6 @@
 :root {
   --clr-black: #263338;
+  --clr-darkgrey: #dfdfdf;
   --clr-grey: #ebeff1;
 }
 
@@ -7,6 +8,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  font: inherit;
 }
 
 body {
@@ -23,6 +25,13 @@ h1 {
   margin: 0 auto;
 }
 
+.value > :first-child {
+  font-size: 1.2em;
+  font-family: monospace;
+
+  margin-right: 0.5em;
+}
+
 /* HEADER */
 header {
   height: 100px;
@@ -37,10 +46,15 @@ header div {
   align-items: center;
 }
 
-header div :nth-child(2) {
+header div > :nth-child(2) {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
   align-items: center;
+}
+
+header p {
+  font-size: 1.4rem;
+  font-weight: normal;
 }
 
 header svg {
@@ -52,58 +66,67 @@ header svg {
   padding: 10px;
 }
 
-/* Account */
+/* -- ACCOUNTS -- */
 
-section {
-  margin: 20px 0;
+.account {
+  margin: 30px 0;
 }
 
-section > :first-child {
+.account-header {
   color: white;
   background-color: grey;
-  font-size: 1.2rem;
-  padding: 15px;
+  font-size: 1.4rem;
+  padding: 20px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
 }
 
-section .container {
+/* -- ACCOUNT : main -- */
+.account .container {
   padding: 0 20px;
 }
 
-section li {
+.account li {
   background-color: white;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-section li:nth-child(2n) {
-  background-color: rgb(223, 223, 223);
+.account li:nth-child(2n) {
+  background-color: var(--clr-darkgrey);
 }
 
-section li > div > span {
-  margin-right: 1em;
+/* -- OPERATION -- */
+.operation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-section li :last-child {
+.operation > :first-child > :first-child {
+  color: hsl(0, 0%, 34%);
+  margin-right: 2em;
+}
+
+.operation :last-child {
   text-align: right;
 }
 
-section > :last-child {
+.account > :last-child {
   margin-top: 10px;
   display: flex;
   justify-content: end;
 }
 
-section button {
+.account button {
   padding: 10px 20px;
   text-transform: uppercase;
   border: none;
   background-color: white;
 }
 
-section button:hover {
-  opacity: 0.8;
+.account button:hover {
+  background-color: var(--clr-darkgrey);
 }

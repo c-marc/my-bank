@@ -1,13 +1,16 @@
+import Value from "./Value";
 import Button from "./Button";
+import Operation from "./Operation";
 
 const Account = ({ account }) => {
-  const bgc = `{background-color: ${account.color};}`;
-  console.log(bgc); // ok
   return (
-    <section>
-      <div className={account.color} style={{ backgroundColor: account.color }}>
+    <section className="account">
+      <div
+        className="account-header"
+        style={{ backgroundColor: account.color }}
+      >
         <h2>{account.name}</h2>
-        <p>{account.balance}</p>
+        <Value value={account.balance} currency="€" />
       </div>
 
       <ul className="container">
@@ -16,11 +19,11 @@ const Account = ({ account }) => {
           // console.log(uid);
           return (
             <li key={uid}>
-              <div>
-                <span>{op.date}</span>
-                <span> {op.description}</span>
-              </div>
-              <span>{op.amount}</span>
+              <Operation
+                date={op.date}
+                description={op.description}
+                amount={op.amount}
+              />
             </li>
           );
         })}
