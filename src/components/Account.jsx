@@ -1,12 +1,11 @@
 import Button from "./Button";
 
 const Account = ({ account }) => {
-  const bgc = `background-color: ${account.color};`;
+  const bgc = `{background-color: ${account.color};}`;
   console.log(bgc); // ok
   return (
     <section>
-      <div className={account.color}>
-        {/* <div className={account.color} style={bgc}> */}
+      <div className={account.color} style={{ backgroundColor: account.color }}>
         <h2>{account.name}</h2>
         <p>{account.balance}</p>
       </div>
@@ -17,8 +16,10 @@ const Account = ({ account }) => {
           // console.log(uid);
           return (
             <li key={uid}>
-              <span>{op.date}</span>
-              <span>{op.description}</span>
+              <div>
+                <span>{op.date}</span>
+                <span> {op.description}</span>
+              </div>
               <span>{op.amount}</span>
             </li>
           );

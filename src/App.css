@@ -1,7 +1,5 @@
 :root {
   --clr-black: #263338;
-  --clr-blue: #1b76d1;
-  --clr-red: #f7f7f7;
   --clr-grey: #ebeff1;
 }
 
@@ -64,7 +62,7 @@ section > :first-child {
   color: white;
   background-color: grey;
   font-size: 1.2rem;
-  padding: 5px 10px;
+  padding: 15px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -76,21 +74,25 @@ section .container {
 
 section li {
   background-color: white;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-section li :not(:nth-child(3)) {
-  flex-grow: 0;
-  text-align: left;
+section li:nth-child(2n) {
+  background-color: rgb(223, 223, 223);
 }
 
-section li :nth-child(3) {
+section li > div > span {
+  margin-right: 1em;
+}
+
+section li :last-child {
   text-align: right;
 }
 
 section > :last-child {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: end;
 }
@@ -98,12 +100,10 @@ section > :last-child {
 section button {
   padding: 10px 20px;
   text-transform: uppercase;
+  border: none;
+  background-color: white;
 }
 
-.red {
-  background-color: var(--clr-red);
-}
-
-.blue {
-  background-color: var(--clr-blue);
+section button:hover {
+  opacity: 0.8;
 }
