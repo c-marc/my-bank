@@ -1,7 +1,8 @@
 :root {
   --clr-black: #263338;
-  --clr-darkgrey: #dfdfdf;
-  --clr-grey: #ebeff1;
+  --clr-grey-90: hsl(0, 0%, 90%);
+  --clr-grey-80: hsl(0, 0%, 80%);
+  --clr-grey-70: hsl(0, 0%, 70%);
 }
 
 *,
@@ -12,7 +13,7 @@
 }
 
 body {
-  background-color: var(--clr-grey);
+  background-color: var(--clr-grey-90);
   font-family: sans-serif;
 }
 
@@ -95,7 +96,11 @@ header svg {
 }
 
 .account li:nth-child(2n) {
-  background-color: var(--clr-darkgrey);
+  background-color: var(--clr-grey-80);
+}
+
+.account li:hover {
+  background-color: var(--clr-grey-70);
 }
 
 /* -- OPERATION -- */
@@ -106,7 +111,7 @@ header svg {
 }
 
 .operation > :first-child > :first-child {
-  color: hsl(0, 0%, 34%);
+  color: hsl(0, 0%, 40%);
   margin-right: 2em;
 }
 
@@ -128,5 +133,5 @@ header svg {
 }
 
 .account button:hover {
-  background-color: var(--clr-darkgrey);
+  background-color: var(--clr-grey-70);
 }
