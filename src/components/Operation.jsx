@@ -1,4 +1,4 @@
-import Value from "./Value";
+import Amount from "./Amount";
 
 const Operation = ({ date, description, amount }) => {
   return (
@@ -7,7 +7,7 @@ const Operation = ({ date, description, amount }) => {
         <span>{date}</span>
         <span> {description}</span>
       </div>
-      <Value value={amount} currency="€"></Value>
+      <Amount value={amount} currency="EUR" />
     </div>
   );
 };

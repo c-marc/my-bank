@@ -1,4 +1,4 @@
-import Value from "./Value";
+import Amount from "./Amount";
 import Button from "./Button";
 import Operation from "./Operation";
 
@@ -10,7 +10,7 @@ const Account = ({ account }) => {
         style={{ backgroundColor: account.color }}
       >
         <h2>{account.name}</h2>
-        <Value value={account.balance} currency="€" />
+        <Amount value={account.balance} currency="EUR" />
       </div>
 
       <ul className="container">

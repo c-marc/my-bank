@@ -26,7 +26,7 @@ h1 {
   margin: 0 auto;
 }
 
-.value > :first-child {
+.amount metric {
   font-size: 1.2em;
   font-family: monospace;
 
@@ -122,7 +122,7 @@ header svg {
   margin-right: 2em;
 }
 
-.operation :last-child {
+.operation > :last-child {
   text-align: right;
 }
 
