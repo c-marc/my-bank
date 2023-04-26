@@ -9,7 +9,6 @@
 ::before,
 ::after {
   box-sizing: border-box;
-  font: inherit;
 }
 
 body {
@@ -21,11 +20,17 @@ h1 {
   font-size: 2rem;
 }
 
+button {
+  font: inherit;
+}
+
+/* -- layout -- */
 .container {
   max-width: min(800px, 90svw);
   margin: 0 auto;
 }
 
+/* -- shared component -- */
 .amount metric {
   font-size: 1.2em;
   font-family: monospace;
@@ -33,7 +38,7 @@ h1 {
   margin-right: 0.5em;
 }
 
-/* HEADER */
+/* -- HEADER -- */
 header {
   height: 100px;
   background-color: var(--clr-black);
@@ -110,7 +115,7 @@ header svg {
   background-color: var(--clr-grey-70);
 }
 
-/* -- OPERATION -- */
+/* -- ACCOUNT: OPERATION -- */
 .operation {
   width: 100%;
   display: flex;
@@ -126,6 +131,7 @@ header svg {
   text-align: right;
 }
 
+/* -- ACCOUNT: Button last line -- */
 .account > :last-child {
   margin-top: 10px;
   display: flex;
