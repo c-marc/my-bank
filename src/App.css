@@ -31,7 +31,7 @@ button {
 }
 
 /* -- shared component -- */
-.amount meter {
+.amount [data-value] {
   font-size: 1.2em;
   font-family: monospace;
 

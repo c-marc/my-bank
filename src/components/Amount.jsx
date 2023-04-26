@@ -8,7 +8,9 @@ const currencySymbols = {
 const Amount = ({ value, currency }) => {
   return (
     <p className="amount">
-      <meter data-currency={currency}>{formatValue(value)}</meter>
+      <span data-value data-currency={currency}>
+        {formatValue(value)}
+      </span>
       <span>{currencySymbols[currency]}</span>
     </p>
   );
