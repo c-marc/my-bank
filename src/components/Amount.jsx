@@ -8,7 +8,7 @@ const currencySymbols = {
 const Amount = ({ value, currency }) => {
   return (
     <p className="amount">
-      <metric data-currency={currency}>{formatValue(value)}</metric>
+      <meter data-currency={currency}>{formatValue(value)}</meter>
       <span>{currencySymbols[currency]}</span>
     </p>
   );
